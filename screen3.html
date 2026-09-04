@@ -65,9 +65,9 @@
     gap:1.8vh;
   }
 
-  /* top row: breakfast / lunch / sides */
+  /* top row: breakfast / lunch / sides — the focus of this screen */
   .top-row{
-    flex:0 0 32%;
+    flex:0 0 48%;
     display:grid;
     grid-template-columns:repeat(3, 1fr);
     gap:1.6vw;
@@ -77,91 +77,94 @@
     background:#fff;
     border:1px solid var(--blush-deep);
     border-radius:1vw;
-    padding:1.6vh 1.4vw;
+    padding:1.8vh 1.5vw;
     display:flex;
     flex-direction:column;
     min-height:0;
     overflow:hidden;
   }
   .card-title{
+    flex:0 0 auto;
     font-family:'Fraunces', serif;
     font-weight:600;
-    font-size:1.3vw;
+    font-size:1.55vw;
     color:var(--espresso);
-    margin:0 0 0.6vh;
+    margin:0 0 0.9vh;
   }
   .food-group{
+    flex:0 0 auto;
     font-family:'Fraunces', serif;
     font-weight:600;
-    font-size:0.88vw;
+    font-size:1.05vw;
     color:var(--rose-deep);
-    margin:0.5vh 0 0.15vh;
+    margin:0.7vh 0 0.2vh;
   }
   .food-group:first-of-type{ margin-top:0; }
   .food-row{
+    flex:0 0 auto;
     display:flex;
     justify-content:space-between;
     gap:0.6vw;
-    font-size:0.88vw;
-    padding:0.22vh 0;
-    line-height:1.25;
+    font-size:1.05vw;
+    padding:0.32vh 0;
+    line-height:1.3;
   }
   .food-row .name{ font-weight:600; }
   .food-row .variant{
     display:block;
     font-weight:400;
-    font-size:0.76vw;
+    font-size:0.88vw;
     color:var(--coffee-soft);
   }
   .food-row .price{ color:var(--rose-deep); font-weight:700; white-space:nowrap; }
 
-  /* add-ons */
+  /* add-ons — smaller reference block, not the focus */
   .addons{
     flex:1 1 auto;
     background:var(--blush);
     border-radius:1vw;
-    padding:1.8vh 2vw;
+    padding:1.2vh 1.8vw;
     min-height:0;
     overflow:hidden;
   }
   .addons-title{
     font-family:'Fraunces', serif;
     font-weight:600;
-    font-size:1.4vw;
+    font-size:1.05vw;
     color:var(--rose-deep);
-    margin:0 0 1vh;
+    margin:0 0 0.6vh;
   }
   .addons-columns{
-    column-count:3;
-    column-gap:2.2vw;
-    height:calc(100% - 3vh);
+    column-count:4;
+    column-gap:1.8vw;
+    height:calc(100% - 2vh);
   }
   .addon-row{
     break-inside:avoid;
     border-top:1px solid var(--line);
-    padding:0.45vh 0;
+    padding:0.3vh 0;
     display:flex;
     justify-content:space-between;
-    gap:0.6vw;
+    gap:0.5vw;
   }
   .addons-columns .addon-row:first-child{ border-top:none; }
   .addon-name{
     font-weight:600;
-    font-size:0.82vw;
-    line-height:1.25;
+    font-size:0.66vw;
+    line-height:1.2;
   }
   .addon-detail{
     display:block;
     font-weight:400;
-    font-size:0.68vw;
+    font-size:0.55vw;
     color:var(--coffee-soft);
-    line-height:1.25;
-    margin-top:0.1vh;
+    line-height:1.2;
+    margin-top:0.08vh;
   }
   .addon-price{
     font-weight:700;
     color:var(--rose-deep);
-    font-size:0.78vw;
+    font-size:0.62vw;
     white-space:nowrap;
     flex:0 0 auto;
   }
