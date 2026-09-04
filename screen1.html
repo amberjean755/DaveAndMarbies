@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dave & Marbie's — Coffee Bar (Screen 1 of 3)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --espresso:#3B2419;
+    --coffee:#6E4530;
+    --coffee-soft:#8C5F44;
+    --cream:#FBF3EA;
+    --blush:#F3D2DC;
+    --blush-deep:#EABBC9;
+    --rose:#C97C93;
+    --rose-deep:#B15E77;
+    --line: rgba(59,36,25,0.16);
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    margin:0; padding:0;
+    width:100vw; height:100vh;
+    overflow:hidden;
+    background:var(--cream);
+    color:var(--espresso);
+    font-family:'Karla', sans-serif;
+  }
+  .screen{
+    width:100vw; height:100vh;
+    display:flex; flex-direction:column;
+    padding:2.2vh 2.6vw;
+  }
+
+  /* header */
+  header{
+    flex:0 0 auto;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    border-bottom:2px solid var(--blush-deep);
+    padding-bottom:1.4vh;
+    margin-bottom:2vh;
+  }
+  .brand{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:2.6vw;
+    line-height:1;
+  }
+  .brand .amp{ color:var(--rose); font-style:italic; font-weight:500; }
+  .section-title{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.9vw;
+    color:var(--rose-deep);
+    text-align:right;
+  }
+  .section-note{
+    display:block;
+    font-family:'Karla', sans-serif;
+    font-weight:400;
+    font-size:0.95vw;
+    color:var(--coffee-soft);
+    font-style:italic;
+    margin-top:0.3vh;
+  }
+
+  /* content */
+  main{
+    flex:1 1 auto;
+    min-height:0;
+    display:grid;
+    grid-template-columns:1.35fr 1fr;
+    gap:2.6vw;
+  }
+
+  .coffee-list{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    min-height:0;
+    overflow:hidden;
+  }
+  .coffee-row{
+    display:flex;
+    align-items:baseline;
+    gap:1vw;
+    border-top:1px solid var(--line);
+    padding:0.55vh 0;
+  }
+  .coffee-row:first-child{ border-top:none; }
+  .coffee-row .dot{
+    flex:1;
+    border-bottom:2px dotted var(--blush-deep);
+    height:0.7em;
+    margin:0 0.4vw;
+  }
+  .coffee-name{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.5vw;
+    white-space:nowrap;
+  }
+  .coffee-variant{
+    font-size:0.95vw;
+    color:var(--coffee-soft);
+    white-space:nowrap;
+  }
+
+  .side-col{
+    display:flex;
+    flex-direction:column;
+    gap:2vh;
+    min-height:0;
+  }
+  .panel{
+    background:var(--blush);
+    border-radius:1.2vw;
+    padding:2vh 1.8vw;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    min-height:0;
+    overflow:hidden;
+  }
+  .panel-title{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:1.5vw;
+    color:var(--rose-deep);
+    margin:0 0 0.6vh;
+  }
+  .panel-caption{
+    font-size:0.85vw;
+    color:var(--coffee);
+    margin:0 0 1.2vh;
+  }
+  .pill-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.6vw;
+  }
+  .pill{
+    background:#fff;
+    border:1px solid var(--blush-deep);
+    color:var(--espresso);
+    font-size:0.95vw;
+    padding:0.6vh 1vw;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+
+  footer{
+    flex:0 0 auto;
+    display:flex;
+    justify-content:flex-end;
+    padding-top:1vh;
+    font-size:0.8vw;
+    color:var(--coffee-soft);
+  }
+</style>
+</head>
+<body>
+<div class="screen">
+  <header>
+    <div class="brand">Dave <span class="amp">&amp;</span> Marbie's</div>
+    <div class="section-title">Coffee Bar
+      <span class="section-note">Every drink available full caf or decaf</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="coffee-list">
+      <div class="coffee-row"><span class="coffee-name">Latte</span><span class="dot"></span><span class="coffee-variant">Hot or Iced</span></div>
+      <div class="coffee-row"><span class="coffee-name">Flat White</span></div>
+      <div class="coffee-row"><span class="coffee-name">Macchiato</span></div>
+      <div class="coffee-row"><span class="coffee-name">Cappuccino</span><span class="dot"></span><span class="coffee-variant">Standard, Dry, or Extra Dry</span></div>
+      <div class="coffee-row"><span class="coffee-name">Americano</span><span class="dot"></span><span class="coffee-variant">Hot or Iced</span></div>
+      <div class="coffee-row"><span class="coffee-name">Breve Latte</span></div>
+      <div class="coffee-row"><span class="coffee-name">Hot Drip Coffee</span></div>
+      <div class="coffee-row"><span class="coffee-name">Iced Coffee</span></div>
+      <div class="coffee-row"><span class="coffee-name">Cold Brew</span></div>
+      <div class="coffee-row"><span class="coffee-name">Red Eye</span></div>
+      <div class="coffee-row"><span class="coffee-name">Steamer</span></div>
+      <div class="coffee-row"><span class="coffee-name">Cafe au Lait</span></div>
+      <div class="coffee-row"><span class="coffee-name">London Fog</span></div>
+      <div class="coffee-row"><span class="coffee-name">Chai Latte</span></div>
+      <div class="coffee-row"><span class="coffee-name">Espresso</span></div>
+    </div>
+
+    <div class="side-col">
+      <div class="panel">
+        <p class="panel-title">Syrups</p>
+        <p class="panel-caption">Add to any coffee drink</p>
+        <div class="pill-group">
+          <span class="pill">Vanilla</span>
+          <span class="pill">French Vanilla</span>
+          <span class="pill">Hazelnut</span>
+          <span class="pill">Toffee Nut</span>
+          <span class="pill">Mocha</span>
+          <span class="pill">White Mocha</span>
+          <span class="pill">Caramel</span>
+          <span class="pill">Salted Caramel</span>
+          <span class="pill">Brown Sugar Cinnamon</span>
+        </div>
+      </div>
+      <div class="panel">
+        <p class="panel-title">Milk</p>
+        <p class="panel-caption">Choose your pour</p>
+        <div class="pill-group">
+          <span class="pill">2%</span>
+          <span class="pill">Whole</span>
+          <span class="pill">Skim</span>
+          <span class="pill">Oat</span>
+          <span class="pill">Soy</span>
+          <span class="pill">Almond</span>
+          <span class="pill">Half &amp; Half</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>1 / 3</footer>
+</div>
+</body>
+</html>
